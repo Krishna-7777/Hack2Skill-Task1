@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { connect } = require("./config/db");
+const { api } = require("./routes/api");
 const app = express();
 
 app.use(cors("*"));
@@ -10,6 +11,8 @@ app.use(express.json())
 app.get('/', (ask, give) => {
     give.send('This is the Task 1')
 })
+
+app.use('/api',api)
 
 app.listen(3000, () => {
     try {
