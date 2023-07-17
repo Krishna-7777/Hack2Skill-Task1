@@ -8,7 +8,7 @@ const schema = mongoose.Schema({
     url: String
   });
 
-const UserModel=mongoose.model('user',userSchema);
+const UserModel=mongoose.model('user', schema);
 
 module.exports={
     UserModel
